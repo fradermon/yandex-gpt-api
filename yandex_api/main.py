@@ -15,7 +15,6 @@ with open(FILE_NAMES_JSON, 'r', encoding='utf-8') as file_names_json:
 
 counter = 0
 
-# Start of the loop
 for id, status in file_stat.items():
     if status == 'no':
         name = next(item['name'] for item in file_names if item['id'] == int(id))
