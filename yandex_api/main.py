@@ -80,8 +80,8 @@ for id, status in file_stat.items():
         with open(FILE_STAT_JSON, 'w', encoding='utf-8') as file_stat_json:
             json.dump(file_stat, file_stat_json, ensure_ascii=False, indent=4)
 
-        counter += 1
-        if counter >= 2:
-            break
+        # counter += 1
+        # if counter >= 2:
+        #     break
 
         time.sleep(0.2)
