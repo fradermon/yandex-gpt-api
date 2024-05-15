@@ -3,21 +3,21 @@ import re
 import os
 
 data = []
-with open('data/kgs_only.json', 'r', encoding='utf-8') as file:
-    data = file.readlines()
-
-data = list(set(data))
-data = [item.replace('\n', '') for item in data]
+with open('data/kgs.json', 'r', encoding='utf-8') as file:
+    for line in file.readlines():
+        data.append(json.loads(line))
+    
 def files_by_letter(pattern, output_file):
     list = []
 
     for item in data:
-        print(re.match(pattern, item))
-        if item and re.match(pattern, item):
+        # print(re.match(pattern, item['КГС']))
+        if item and re.match(pattern, item['КГС']):
             list.append(item)
-    print(list)
+    # print(list)
     with open(output_file, 'w', encoding='utf-8') as output_file:
         for entry in list:
+            print(entry)
             json.dump(entry, output_file, ensure_ascii=False)
             output_file.write('\n') 
 
