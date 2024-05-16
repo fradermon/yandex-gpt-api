@@ -3,7 +3,7 @@ import re
 import os
 
 data = []
-with open('data/kgs.json', 'r', encoding='utf-8') as file:
+with open('data/unique_kgs.json', 'r', encoding='utf-8') as file:
     for line in file.readlines():
         data.append(json.loads(line))
     
