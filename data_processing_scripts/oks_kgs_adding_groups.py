@@ -2,8 +2,8 @@ import json
 import re
 
 # change for your device
-input_file = 'data/names_ussr_oks_kgs_25.json'
-output_file = 'edited_names_ussr_oks_kgs_ordered.json'
+input_file = 'data/all_names_modern_oks_kgs.json'
+output_file = 'edited_all_names_modern_oks_kgs.json'
 
 with open(input_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
